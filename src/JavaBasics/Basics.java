@@ -1,5 +1,8 @@
 package JavaBasics;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Basics {
 
 	public static void main(String[] args) {
@@ -16,6 +19,12 @@ public class Basics {
 			System.out.println(arr[i]);
 		}
 		
+		
+		String [] strArr = {"Sameer", "Akhtar", "is", "the", "best."};
+		System.out.println(strArr[4]);
+		
+		List<String> arrList = Arrays.asList(strArr);
+		System.out.println(arrList.get(1));
 		
 		String name = "Sameer Akhtar";
 		
