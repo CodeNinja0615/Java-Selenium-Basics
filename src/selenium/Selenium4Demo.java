@@ -23,12 +23,12 @@ public class Selenium4Demo {
 		driver.get("https://rahulshettyacademy.com/angularpractice/");
 
 		//------- Switching windows
-		driver.switchTo().newWindow(WindowType.TAB);
+		driver.switchTo().newWindow(WindowType.TAB); //---Open new tab
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
 		String parentWindowId = it.next();
 		String childWindowId = it.next();
-		driver.switchTo().window(childWindowId);
+		driver.switchTo().window(childWindowId); //---Stwich to the tab with no open url
 		driver.get("https://rahulshettyacademy.com/");
 		String text = driver.findElement(By.cssSelector("h2 [href*='/p/core-java-for']")).getText();
 		driver.switchTo().window(parentWindowId);
