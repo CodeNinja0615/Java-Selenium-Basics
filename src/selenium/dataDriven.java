@@ -25,7 +25,7 @@ public class dataDriven {
 	}
 	
 	
-	public ArrayList<String> getData(String testCCase) throws IOException {
+	public ArrayList<String> getData(String testCase) throws IOException {
 
 		//---ArrayList to store data
 		ArrayList<String> data = new ArrayList<String>();
@@ -58,7 +58,7 @@ public class dataDriven {
 				while (rows.hasNext()) {
 					Row row = rows.next();
 					String cellTitle = row.getCell(column).getStringCellValue(); //---Getting a particular cooresponding cell with column containing title
-					if (cellTitle.equalsIgnoreCase(testCCase)) { // ---Parametrize this
+					if (cellTitle.equalsIgnoreCase(testCase)) { // ---Parametrize this
 						Iterator<Cell> cellValues = row.cellIterator(); //---Iterate through cell in a row
 						while(cellValues.hasNext()) {
 							Cell cellNext = cellValues.next();
