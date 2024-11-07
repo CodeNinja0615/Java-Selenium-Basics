@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 
 public class SetGeoLocation {
-	
+	//--Emulation
 	public static void main(String[] args) {
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
