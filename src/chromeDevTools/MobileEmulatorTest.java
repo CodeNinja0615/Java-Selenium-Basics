@@ -3,12 +3,10 @@ package chromeDevTools;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v128.emulation.Emulation;
 
 public class MobileEmulatorTest {
 	

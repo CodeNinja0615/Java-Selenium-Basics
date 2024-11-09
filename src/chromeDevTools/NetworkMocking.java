@@ -16,19 +16,22 @@ public class NetworkMocking {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
-		devTools.send(Fetch.enable(Optional.empty(), Optional.empty()));
+		devTools.send(Fetch.enable(Optional.empty(), Optional.empty())); // ---To enable fetch events and issuing of
+																			// requestPause
+		// ---If pattern is empty it will work for all http calls else workon targetted
+		// patterns of http calls
 
 		devTools.addListener(Fetch.requestPaused(), request -> {
 			if (request.getRequest().getUrl().contains("shetty")) {
-				String mockedURL = request.getRequest().getUrl().replace("=shetty", "=BadGuy");
+				String mockedURL = request.getRequest().getUrl().replace("=shetty", "=BadGuy"); // ---Can chnage the api
+																								// call value
 				System.out.println(mockedURL);
-				
-				//-----If continueRequest is not sent Automation will not be able to launch url
+
+				// -----If continueRequest is not sent Automation will not be able to launch url
 				devTools.send(Fetch.continueRequest(request.getRequestId(), Optional.of(mockedURL),
 						Optional.of(request.getRequest().getMethod()), Optional.empty(), Optional.empty(),
 						Optional.empty()));
-			}
-			else {
+			} else {
 				devTools.send(Fetch.continueRequest(request.getRequestId(), Optional.of(request.getRequest().getUrl()),
 						Optional.of(request.getRequest().getMethod()), Optional.empty(), Optional.empty(),
 						Optional.empty()));
