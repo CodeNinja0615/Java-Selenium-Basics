@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium.UploadDownload">
+      <class name="appium.AppiumBasics">
         <methods>
-          <include name="test"/>
+          <include name="appiumTest"/>
         </methods>
-      </class> <!-- selenium.UploadDownload -->
+      </class> <!-- appium.AppiumBasics -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

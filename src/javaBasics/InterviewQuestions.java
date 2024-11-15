@@ -1,4 +1,4 @@
-package JavaBasics;
+package javaBasics;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
