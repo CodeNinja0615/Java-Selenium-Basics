@@ -20,7 +20,7 @@ public class JavascriptExecutorDemo {
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,500)");
-		js.executeScript("document.querySelector(\".tableFixHead\").scrollTop=500");
+		js.executeScript("document.querySelector(\".tableFixHead\").scrollTop=500"); //----Scrolling on a targetted element
 		List<WebElement> values = driver.findElements(By.xpath("//div[@class='tableFixHead']//td[4]"));
 		int sum = 0;
 		for(int i = 0;i<values.size();i++) {

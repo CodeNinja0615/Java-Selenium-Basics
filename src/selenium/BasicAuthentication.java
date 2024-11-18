@@ -11,9 +11,11 @@ public class BasicAuthentication {
 
 	public static void main(String[] args) {
 		ChromeDriver driver = new ChromeDriver();
-		Predicate<URI> uriPredicate = uri -> uri.getHost().contains("httpbin.org");
+		Predicate<URI> uriPredicate = uri -> uri.getHost().contains("herokuapp");
 
-		((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("foo", "bar"));
-		driver.get("http://httpbin.org/basic-auth/foo/bar");
+		((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("admin", "admin"));
+		driver.get("https://the-internet.herokuapp.com/basic_auth");
+//		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+		
 	}
 }
