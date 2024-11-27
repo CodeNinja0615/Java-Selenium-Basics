@@ -9,6 +9,7 @@ import java.time.Duration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -30,11 +31,14 @@ public class AppiumBaseTest {
 		options.setDeviceName("ZA222JVBYL");
 //		options.setApp("C:/Users/HP/Downloads/General-Store.apk");
 //		adb shell dumpsys window | findstr "mCurrentFocus"
-//		options.setAppPackage("com.instagram.barcelona");
-//		options.setAppActivity("com.instagram.barcelona.mainactivity.BarcelonaActivity");
+//		options.setAppPackage("com.androidsample.generalstore");
+//		options.setAppActivity("com.androidsample.generalstore.MainActivity");
+//		options.setAppWaitForLaunch(true);
 		options.setNoReset(true);
+		options.autoGrantPermissions();
 		driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.unlockDevice();
 	}
 
 	@AfterMethod

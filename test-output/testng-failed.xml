@@ -5,7 +5,9 @@
     <classes>
       <class name="appium.AppiumBasics">
         <methods>
+          <include name="setUp"/>
           <include name="appiumTest"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- appium.AppiumBasics -->
     </classes>
