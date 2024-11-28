@@ -13,7 +13,8 @@ public class AppiumBasics extends AppiumBaseTest {
 //	https://github.com/appium/appium-uiautomator2-driver/blob/master/docs/android-mobile-gestures.md
 	@Test
 	public void appiumTest() throws MalformedURLException, URISyntaxException {
-		driver.activateApp("io.appium.android.apis");
+//		driver.activateApp("io.appium.android.apis");
+
 		driver.findElement(AppiumBy.accessibilityId("Preference")).click();
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"3. Preference dependencies\"]")).click();
 		driver.findElement(AppiumBy.className("android.widget.CheckBox")).click();

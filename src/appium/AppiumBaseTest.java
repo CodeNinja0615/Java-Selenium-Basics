@@ -33,8 +33,12 @@ public class AppiumBaseTest {
 //		adb shell dumpsys window | findstr "mCurrentFocus"
 //		options.setAppPackage("com.androidsample.generalstore");
 //		options.setAppActivity("com.androidsample.generalstore.MainActivity");
-//		options.setAppWaitForLaunch(true);
+
+		options.setAppActivity("com.instagram.barcelona.mainactivity.BarcelonaActivity");
+		options.setAppPackage("com.instagram.barcelona");
+		options.setAppWaitForLaunch(true);
 		options.setNoReset(true);
+		options.setGpsEnabled(true);
 		options.autoGrantPermissions();
 		driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
