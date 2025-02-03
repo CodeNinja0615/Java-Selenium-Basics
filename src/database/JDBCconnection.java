@@ -3,6 +3,7 @@ package database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -24,8 +25,23 @@ public class JDBCconnection {
 		Statement statement = con.createStatement();
 
 		// Executing the query
-		ResultSet rs = statement.executeQuery("select * from EmployeeInfo where name = 'Sameer';");
-
+		ResultSet rs = statement.executeQuery("select * from EmployeeInfo where name = 'Steven';");
+		
+		
+//		 // Get metadata
+//        ResultSetMetaData rsmd = rs.getMetaData();
+//        int columnCount = rsmd.getColumnCount();
+//
+//        // Move the cursor to the first row
+//        while (rs.next()) {
+//            // Print all columns
+//            for (int i = 1; i <= columnCount; i++) {
+//                System.out.print(rsmd.getColumnName(i) + ": " + rs.getString(i) + " ");
+//            }
+//            System.out.println();
+//        }
+		
+		
 		// Move the cursor to the first row
 		while (rs.next()) { //----while will get as much value as it has
 			// Retrieve the data from the "location" column

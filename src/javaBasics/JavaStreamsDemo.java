@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -11,6 +13,7 @@ import java.util.stream.Stream;
 import org.testng.annotations.Test;
 
 public class JavaStreamsDemo {
+	
 	@Test
 	public void regular() {
 
@@ -103,6 +106,7 @@ public class JavaStreamsDemo {
 				"Tarika");
 		names.stream().sorted().forEach(s -> System.out.println(s));
 
+		
 		String name = "sameer";
 		// Sorting the characters of the name
 		String sortedName = name.chars() // Convert the String into an IntStream of character codes
@@ -152,4 +156,18 @@ public class JavaStreamsDemo {
 
 		System.out.println(reversed);
 	}
+	
+	@Test
+	public void repeatedCharactersInAString() {
+        String input = "sameer";
+
+        Map<Character, Long> charCountMap = input.chars()
+                .mapToObj(c -> (char) c) // Convert int to Character
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        // Filter and print only repeated characters
+        charCountMap.entrySet().stream()
+                .filter(entry -> entry.getValue() >= 1)
+                .forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
+    }
 }

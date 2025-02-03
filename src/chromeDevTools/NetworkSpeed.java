@@ -18,8 +18,8 @@ public class NetworkSpeed {
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
 		devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-		devTools.send(Network.emulateNetworkConditions(true, 3000, 20000, 10000, Optional.of(ConnectionType.ETHERNET),
-				Optional.empty(), Optional.empty(), Optional.empty()));
+		devTools.send(Network.emulateNetworkConditions(false, 3000, 20000, 10000, Optional.of(ConnectionType.ETHERNET), //false means network activity is not offline
+				Optional.empty(), Optional.empty(), Optional.empty())); //---Simulating network conditions
 		
 		devTools.addListener(Network.loadingFailed(), loadingFailed -> { //---Works only on loading failure
 			System.out.println(loadingFailed.getErrorText());
