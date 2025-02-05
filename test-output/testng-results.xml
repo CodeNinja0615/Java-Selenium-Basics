@@ -1,41 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-03T23:18:52 IST" name="Default suite" finished-at="2025-02-03T23:18:52 IST" duration-ms="80">
+  <suite started-at="2025-02-06T00:50:35 IST" name="Default suite" finished-at="2025-02-06T00:50:37 IST" duration-ms="1176">
     <groups>
     </groups>
-    <test started-at="2025-02-03T23:18:52 IST" name="Default test" finished-at="2025-02-03T23:18:52 IST" duration-ms="80">
-      <class name="javaBasics.JavaStreamsDemo">
-        <test-method signature="regular()[pri:0, instance:javaBasics.JavaStreamsDemo@771a660]" started-at="2025-02-03T23:18:52 IST" name="regular" finished-at="2025-02-03T23:18:52 IST" duration-ms="10" status="PASS">
+    <test started-at="2025-02-06T00:50:35 IST" name="Default test" finished-at="2025-02-06T00:50:37 IST" duration-ms="1176">
+      <class name="apiTesting.SumValidation">
+        <test-method signature="sumOfCourses()[pri:0, instance:apiTesting.SumValidation@6fdbe764]" started-at="2025-02-06T00:50:35 IST" name="sumOfCourses" finished-at="2025-02-06T00:50:37 IST" duration-ms="1145" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regular -->
-        <test-method signature="repeated()[pri:0, instance:javaBasics.JavaStreamsDemo@771a660]" started-at="2025-02-03T23:18:52 IST" name="repeated" finished-at="2025-02-03T23:18:52 IST" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- repeated -->
-        <test-method signature="streamCollect()[pri:0, instance:javaBasics.JavaStreamsDemo@771a660]" started-at="2025-02-03T23:18:52 IST" name="streamCollect" finished-at="2025-02-03T23:18:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- streamCollect -->
-        <test-method signature="streamFilter()[pri:0, instance:javaBasics.JavaStreamsDemo@771a660]" started-at="2025-02-03T23:18:52 IST" name="streamFilter" finished-at="2025-02-03T23:18:52 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- streamFilter -->
-        <test-method signature="streamMap()[pri:0, instance:javaBasics.JavaStreamsDemo@771a660]" started-at="2025-02-03T23:18:52 IST" name="streamMap" finished-at="2025-02-03T23:18:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- streamMap -->
-        <test-method signature="streamSorting()[pri:0, instance:javaBasics.JavaStreamsDemo@771a660]" started-at="2025-02-03T23:18:52 IST" name="streamSorting" finished-at="2025-02-03T23:18:52 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- streamSorting -->
-        <test-method signature="stringReverse()[pri:0, instance:javaBasics.JavaStreamsDemo@771a660]" started-at="2025-02-03T23:18:52 IST" name="stringReverse" finished-at="2025-02-03T23:18:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stringReverse -->
-      </class> <!-- javaBasics.JavaStreamsDemo -->
+        </test-method> <!-- sumOfCourses -->
+      </class> <!-- apiTesting.SumValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

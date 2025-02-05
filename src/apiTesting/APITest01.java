@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.testng.Assert;
 
+import apiTesting.files.ReusableMethods;
 import apiTesting.files.payload;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -45,11 +46,10 @@ public class APITest01 {
 				.get("/maps/api/place/get/json").then().assertThat().statusCode(200).log().all().extract().response()
 				.asString();
 		System.out.println(getResponse);
-		JsonPath js1 = new JsonPath(getResponse);
+		JsonPath js1 = ReusableMethods.rawToJson(getResponse);
 		String actualAddress = js1.getString("address");
 		System.out.println(actualAddress);
 		Assert.assertEquals(actualAddress, newAddress);
-
 	}
 
 }
