@@ -21,7 +21,7 @@ public class APITest01 {
 		// add place -> update place with new address -> get place to validate if new
 		// address is present in response
 
-		// Add place
+		// Add place //POST
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		String response = given().queryParam("key", "qaclick123").header("Content-Type", "application/json")
 				.body(payload.AddPlace()).when().post("/maps/api/place/add/json").then().assertThat().statusCode(200)
@@ -34,14 +34,14 @@ public class APITest01 {
 		System.out.println(placeID);
 
 		String newAddress = "70 Summer walk, USA";
-		// update place
+		// update place //PUT
 		given().queryParam("key", "qaclick123").header("Content-Type", "application/json")
 				.body("{\r\n" + "\"place_id\":\"" + placeID + "\",\r\n" + "\"address\":\"" + newAddress + "\",\r\n"
 						+ "\"key\":\"qaclick123\"\r\n" + "}\r\n" + "")
 				.when().put("/maps/api/place/update/json").then().assertThat().statusCode(200)
 				.body("msg", equalTo("Address successfully updated")).log().all();
 
-		// get place
+		// get place //GET
 		String getResponse = given().queryParam("key", "qaclick123").queryParam("place_id", placeID).when()
 				.get("/maps/api/place/get/json").then().assertThat().statusCode(200).log().all().extract().response()
 				.asString();

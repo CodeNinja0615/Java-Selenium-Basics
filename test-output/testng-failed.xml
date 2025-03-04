@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="apiTesting.SumValidation">
+      <class name="genAI.Gemini">
         <methods>
-          <include name="sumOfCourses"/>
+          <include name="testGenerateContent"/>
         </methods>
-      </class> <!-- apiTesting.SumValidation -->
+      </class> <!-- genAI.Gemini -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
