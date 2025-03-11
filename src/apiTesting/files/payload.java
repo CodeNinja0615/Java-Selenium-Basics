@@ -19,4 +19,13 @@ public class payload {
 				+ "      \"copies\": 4\r\n" + "    },\r\n" + "    {\r\n" + "      \"title\": \"RPA\",\r\n"
 				+ "      \"price\": 45,\r\n" + "      \"copies\": 10\r\n" + "    }\r\n" + "  ]\r\n" + "}\r\n" + "";
 	}
+
+	public static String AddBook(String isbn, String aisle) {
+		return "{\n" + "\n" + "\"name\":\"Learn Appium Automation with Java\",\n" + "\"isbn\":\"" + isbn + "\",\n"
+				+ "\"aisle\":\"" + aisle + "\",\n" + "\"author\":\"Sameer Akhtar\"\n" + "}\n" + "";
+	}
+
+	public static String DeleteBook(String ID) {
+		return "{\n" + " \n" + "\"ID\" : \"" + ID + "\"\n" + " \n" + "}";
+	}
 }
