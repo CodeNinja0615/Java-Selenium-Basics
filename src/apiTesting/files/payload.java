@@ -28,4 +28,20 @@ public class payload {
 	public static String DeleteBook(String ID) {
 		return "{\n" + " \n" + "\"ID\" : \"" + ID + "\"\n" + " \n" + "}";
 	}
+	
+	public static String JiraCreateBug() {
+		return "{\n"
+				+ "    \"fields\": {\n"
+				+ "       \"project\":\n"
+				+ "       {\n"
+				+ "          \"key\": \"SCRUM\"\n"
+				+ "       },\n"
+				+ "       \"summary\": \"Links are not working.--Automation\",\n"
+				+ "       \"issuetype\": {\n"
+				+ "          \"name\": \"Bug\"\n"
+				+ "       }\n"
+				+ "   }\n"
+				+ "}\n"
+				+ "";
+	}
 }

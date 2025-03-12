@@ -28,7 +28,7 @@ public class DynamicJSON {
 
 		//---body(new String(Files.readAllBytes(Paths.get("")))) can also use this read json file
 //		Content of the file to String -> Byte -> String
-		// ---DELETE Call to delete a data
+		// ---POST Call to delete a data
 		String delRes = given().log().all().header("Content-Type", "application/json").body(payload.DeleteBook(id))
 				.when().post("/Library/DeleteBook.php").then().assertThat().statusCode(200).extract().response()
 				.asString();
