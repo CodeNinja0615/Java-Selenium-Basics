@@ -36,5 +36,4 @@ public class SerializeTest {
 		System.out.println(res.asPrettyString());
 
 	}
-
 }
