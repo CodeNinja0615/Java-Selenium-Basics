@@ -76,3 +76,22 @@ public class AddPlace {
 		this.language = language;
 	}
 }
+
+
+
+//{
+//	  "location": {
+//	    "lat": -38.383494,
+//	    "lng": 33.427362
+//	  },
+//	  "accuracy": 50,
+//	  "name": "Sameer Akhtar",
+//	  "phone_number": "(+91) 983 893 3937",
+//	  "address": "29, side layout, cohen 09",
+//	  "types": [
+//	    "Ed park",
+//	    "Education"
+//	  ],
+//	  "website": "http://rahulshettyacademy.com",
+//	  "language": "French-IN"
+//}

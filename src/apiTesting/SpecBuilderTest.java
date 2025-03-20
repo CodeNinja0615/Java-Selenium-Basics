@@ -33,9 +33,11 @@ public class SpecBuilderTest {
 		jsonBody.setWebsite("RandomGut.co.in");
 		jsonBody.setName("Sameer Akhtar");
 
+		//----Request Spec. is used for given and when-------//
 		RequestSpecification reqSpec = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
 				.addQueryParam("key", "qaclick123").setContentType(ContentType.JSON).build();
 
+		//------Response Spec. is used for then-----//
 		ResponseSpecification resSpec = new ResponseSpecBuilder().expectStatusCode(200)
 				.expectContentType(ContentType.JSON).build();
 
