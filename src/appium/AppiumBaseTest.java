@@ -5,6 +5,8 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,9 +24,18 @@ public class AppiumBaseTest {
 	
 	@BeforeMethod
 	public void setUp() throws MalformedURLException, URISyntaxException {
-		service = new AppiumServiceBuilder()
-				.withAppiumJS(
-						new File("C://Users//HP//AppData//Roaming//npm//node_modules//appium//build//lib//main.js"))
+//		service = new AppiumServiceBuilder()
+//				.withAppiumJS(
+//						new File("C://Users//HP//AppData//Roaming//npm//node_modules//appium//build//lib//main.js"))
+//				.withIPAddress("127.0.0.1").usingPort(4723).build();
+		
+		Map<String, String> env = new HashMap<>(System.getenv());
+		env.put("ANDROID_HOME", "/Users/sameerakhtar/Library/Android/sdk");
+		env.put("ANDROID_SDK_ROOT", "/Users/sameerakhtar/Library/Android/sdk");
+
+		service = new AppiumServiceBuilder().usingDriverExecutable(new File("/opt/homebrew/opt/node@22/bin/node")) // Explicit Node.js path
+				.withAppiumJS(new File("/opt/homebrew/lib/node_modules/appium/build/lib/main.js")) // Appium path
+				.withEnvironment(env) // ✅ Pass environment variables explicitly
 				.withIPAddress("127.0.0.1").usingPort(4723).build();
 		service.start();
 		UiAutomator2Options options = new UiAutomator2Options();
