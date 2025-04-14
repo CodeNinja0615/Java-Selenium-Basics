@@ -10,7 +10,7 @@ public class BrowserOptionsDemo {
 	public static void main(String[] args) {
 		//--https://www.selenium.dev/documentation/webdriver/drivers/options/
 		ChromeOptions options = new ChromeOptions();
-		options.setAcceptInsecureCerts(true);
+		options.setAcceptInsecureCerts(true); //----SSL Certification example
 //		Proxy proxy = new Proxy();
 //		proxy.setHttpProxy("");
 //		options.setCapability("proxy", proxy);
