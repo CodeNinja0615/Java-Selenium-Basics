@@ -17,6 +17,7 @@ public class FramesTest {
 //		driver.switchTo().frame(0);
 //		driver.findElement(By.id("draggable")).click();
 		
+		//Drag and Drop code
 		Actions action = new Actions(driver);
 		action.dragAndDrop(driver.findElement(By.id("draggable")), driver.findElement(By.id("droppable"))).build().perform();
 		
