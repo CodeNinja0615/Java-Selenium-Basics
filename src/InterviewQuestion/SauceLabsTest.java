@@ -1,11 +1,8 @@
 package InterviewQuestion;
 
 import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
